@@ -20,6 +20,9 @@ function make_HIRO () {
     controller.moveSprite(HIRO)
     scene.cameraFollowSprite(HIRO)
 }
+scene.onOverlapTile(SpriteKind.Player, assets.tile`myTile31`, function (sprite, location) {
+    game.gameOver(false)
+})
 let HIRO: Sprite = null
 scene.setBackgroundColor(9)
 make_HIRO()
